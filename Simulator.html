@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/86cb9e2bb6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      html * {
+        padding: 0;
+        margin: 0;
+        font-family: "Montserrat", sans-serif !important;
+      }
+      b {
+        color: #39858d;
+      }
+      h3 {
+        color: #333333;
+        font-family: "Fraunces", serif !important;
+        font-size: 48px;
+        letter-spacing: -0.4px;
+        text-align: left;
+      }
+      h4 {
+        color: #333333;
+        font-family: "Fraunces", serif !important;
+        font-size: 25px;
+        letter-spacing: -0.4px;
+        margin: 10px auto;
+      }
+      h6 {
+        color: #8c8c8c !important;
+        font-size: 14px;
+      }
+      footer {
+        background-color: #333333;
+        width: 100%;
+        font-size: 22px;
+        font-weight: 200;
+        line-height: 25px !important;
+      }
+      .button {
+        background-color: #9b4d3e;
+        border-radius: 2px;
+        width: 287px;
+        height: 48px;
+      }
+      .card {
+        width: 280px;
+        height: 467px;
+      }
+      .card img {
+        width: 280px;
+        height: 280px;
+      }
+      .card p {
+        color: #333333;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+      .center-nav {
+        margin: auto 100px;
+      }
+      .contain {
+        padding: 300px;
+      }
+      .copyRight {
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: left;
+      }
+      .home {
+        background-image: url("/assets/Nathan-home/svg/Nathan_Foto_Simular@1.5x.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+      }
+      .lose {
+        line-height: 30px;
+      }
+      #nav {
+        width: 100%;
+        float: left;
+        padding: 5px 265px;
+      }
+      #nav li {
+        float: right;
+        list-style: none;
+        text-align: left;
+      }
+      #nav li a {
+        padding: 22px 15px;
+        font-weight: 500;
+        font-size: 12px;
+        text-decoration: none;
+        float: right;
+        color: #8c8c8c;
+        line-height: 14px;
+        text-align: left;
+      }
+      #nav li img {
+        padding: 14px;
+      }
+      .navbar {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        background-color: white;
+      }
+      .section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+      .sec-inf {
+        margin: auto;
+        padding: 100px 300px;
+      }
+      .text-now {
+        color: #333333;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 25px;
+        margin-top: 10px;
+      }
+
+      .footer {
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 150px;
+      }
+      .menu-footer {
+        line-height: 20px;
+      }
+      .menu-footer li a {
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-weight: 500;
+        letter-spacing: -1px;
+        font-size: 15px;
+      }
+      .menu-footer li {
+        list-style: none;
+        font-weight: 400;
+        color: #ffffff;
+        font-family: "Fraunces", serif !important;
+        line-height: 16px;
+        text-align: left;
+        margin-bottom: 15px;
+      }
+
+      .text-info {
+        color: #ffffff;
+        font-family: "Fraunces", serif !important;
+        font-size: 80px;
+        letter-spacing: -0.4px;
+        line-height: 76px;
+        text-align: left;
+        margin-bottom: 50px;
+      }
+      .p-p {
+        padding: 50px 300px;
+      }
+      @media screen and (max-width: 1400px) {
+        #nav {
+          padding: 5px 70px;
+        }
+
+        #nav a {
+          font-size: 12px !important;
+          font-weight: 900;
+        }
+        #nav li a {
+          padding: none;
+        }
+        .contain {
+          padding: 300px 70px;
+        }
+        .sec-inf {
+          padding: 100px 70px;
+        }
+        .p-p {
+          padding: 50px 70px;
+        }
+        footer {
+          font-size: 16px;
+        }
+        .copyRight {
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 1010px) {
+        #nav {
+          padding: 5px 28px;
+        }
+        #nav a {
+          font-size: 11px !important;
+        }
+        .p-p {
+          padding: 50px 28px;
+        }
+        .contain {
+          padding: 200px 28px;
+        }
+        .sec-inf {
+          padding: 100px 28px;
+        }
+        .home {
+          height: 800px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        #nav li a {
+          padding: 22px 5px;
+        }
+        h3 {
+          font-size: 38px;
+        }
+        .text-info {
+          font-size: 60px;
+          line-height: 70px;
+        }
+        .card {
+          width: 200px;
+        }
+        .card img {
+          width: 200px;
+          height: 200px;
+        }
+        .card p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .home {
+          height: 700px;
+        }
+        .text-now {
+          font-size: 18px;
+          line-height: 20px;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        .text-info {
+          font-size: 40px;
+          line-height: 70px;
+        }
+        .section {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin: 40px 40px;
+        }
+        .sec-inf {
+          padding: 100px 28px 0px 28px;
+        }
+        .footer {
+          display: grid;
+        }
+        .lose {
+          margin-bottom: 40px;
+        }
+        footer {
+          font-size: 14px;
+        }
+        .footer {
+          margin-bottom: 70px;
+        }
+      }
+      @media screen and (max-width: 530px) {
+        .text-info {
+          line-height: 40px;
+        }
+        .section {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          margin: 40px 40px;
+        }
+        .home {
+          height: 600px;
+        }
+        .menu-footer li a {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul id="nav">
+        <img
+          style="margin-left: 20px"
+          src="./assets/LogoNathan-red.svg"
+          alt="Logo-Nathan"
+        />
+        <li><img src="./assets/Store/svg/Group@1.5x.svg" alt="" /></li>
+        <li><img src="./assets/Cred/svg/Group@1.5x.svg" alt="" /></li>
+        <li><a href="#">CONTACTO</a></li>
+        <li><a href="#">SOBRE NOSOTROS</a></li>
+        <li><a href="#">ACTUALIDAD</a></li>
+        <li><a href="#">COLECCION</a></li>
+        <li><a href="#">TIENDA</a></li>
+        <li><a href="#">INICIO</a></li>
+      </ul>
+    </nav>
+    <!-- Home -->
+    <div class="home">
+      <div class="contain">
+        <div class="text-info">
+          Descubre cómo se <br />
+          verá tu espacio con <br />
+          tu nueva alfombra <br />
+          en segundos
+        </div>
+        <button class="button">Simular ahora</button>
+      </div>
+    </div>
+    <!-- Sec-Inf -->
+    <div class="sec-inf">
+      <div>
+        <h6>SIMULADOR</h6>
+        <h3>Sigue los pasos</h3>
+        <p class="text-now">
+          Ahora puedes ver nuestras alfombras en tu espacio sin salir de casa.
+          Sólo tendrás que tomar una foto de tu espacio y seguir los pasos a
+          continuación.
+        </p>
+      </div>
+      <div class="section">
+        <div class="card">
+          <img src="./assets/Bitmap-f-1/svg/Bitmap@1.5x.svg" alt="" />
+          <h4>1. Elige la alfombra</h4>
+          <p>
+            Ingresa a nuestro <b>simulador</b> o navega por nuestra
+            <b>tienda</b> y escoge la alfombra que más te guste. Luego, haz clic
+            en “simular en mi espacio”.
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/Nathan-f-2/svg/Nathan_Foto_Simular@1.5x.svg"
+            alt=""
+          />
+          <h4>2. Sube una foto</h4>
+          <p>
+            Toma una foto de tu espacio con tu celular y selecciónala para
+            subirla a nuestro simulador.
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/Nathan-f-2/svg/Nathan_Foto_Simular@1.5x.svg"
+            alt=""
+          />
+          <h4>3. Ubica la alfombra</h4>
+          <p>Coloca la alfombra en el lugar que desees y voilà.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="p-p">
+        <img
+          style="margin-left: -15px; filter: brightness(20)"
+          src="./assets/LogoNathan-black.svg"
+          alt=""
+        />
+        <div class="footer">
+          <div class="lose">
+            <h6>MENÚ</h6>
+            <br />
+            <ul class="menu-footer">
+              <li><a href="#">INICIO</a></li>
+              <li><a href="#">TIENDA</a></li>
+              <li><a href="#">COLECCION</a></li>
+              <li><a href="#">ACTUALIDAD</a></li>
+              <li><a href="#">SOBRE NOSOTROS</a></li>
+              <li><a href="#">CONTACTO</a></li>
+            </ul>
+          </div>
+          <div class="lose">
+            <h6>ENCUÉNTRANOS EN</h6>
+            <br />
+            <div>
+              <h5>San Isidro | Casa Conquistadores</h5>
+              Conquistadores 940 <br />
+              10:00 am - 6:00pm
+            </div>
+            <br />
+            <div>
+              <h5>Chacarilla | Casa Chacarilla</h5>
+              Punta Pejerrey 197, Surco <br />
+              10:00 am - 6:00pm
+            </div>
+          </div>
+          <div class="lose">
+            <div>
+              <h6>NUESTRAS REDES</h6>
+              <br />
+              <div>
+                <a href="#"
+                  ><img
+                    style="margin-right: 30px"
+                    src="./assets/Ins/svg/Group 2@1.5x.svg"
+                    alt="instagram-nathan"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./assets/Fb/svg/Group 14@1.5x.svg"
+                    alt="facebook-nathan"
+                /></a>
+              </div>
+              <p>¡No te olvides de seguirnos</p>
+            </div>
+            <br />
+            <div>
+              <h6>ESCRÍBENOS</h6>
+              <br />
+              <a href="#">
+                <img
+                  src="./assets/Wtsp/svg/Group@1.5x.svg"
+                  alt="whatsapp-nathan"
+                />
+              </a>
+              <p>
+                Escribenos por Whatsapp <br />
+                10:00 am - 6:00pm
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <br />
+        <p class="copyRight">Copyright 2020 © Nathan Alfombras</p>
+      </div>
+    </footer>
+  </body>
+</html>
